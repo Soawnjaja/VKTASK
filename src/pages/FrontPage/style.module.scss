@@ -1,0 +1,201 @@
+.page {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2.5rem;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  color: #1a1a1a;
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.treeRoot,
+.nestedList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nestedList {
+  margin-top: 0.125rem;
+  padding-left: 1.25rem;
+  border-left: 1px solid #e2e4e8;
+}
+
+.node {
+  margin: 0.125rem 0;
+}
+
+.dirRow {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  width: 100%;
+  padding: 0.35rem 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background: #f4f5f7;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.12s ease;
+}
+
+.dirRow:hover {
+  background: #e8eaf0;
+}
+
+.fileRow {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  transition:
+    background 0.12s ease,
+    box-shadow 0.12s ease;
+}
+
+.fileRow:hover {
+  background: #f0f4ff;
+}
+
+.fileRow:focus-visible {
+  box-shadow: 0 0 0 2px #5b7cfa;
+}
+
+.fileRowSelected {
+  background: #dce6ff;
+  box-shadow: inset 0 0 0 1px #5b7cfa;
+}
+
+.fileRowSelected:hover {
+  background: #cfdbff;
+}
+
+.label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.fileSize {
+  flex-shrink: 0;
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  color: #4a5568;
+}
+
+.dirRow .icon {
+  color: #c27803;
+}
+
+.fileRow .icon {
+  color: #4a67d4;
+}
+
+.chevron {
+  flex-shrink: 0;
+  width: 1rem;
+  height: 1rem;
+  color: #718096;
+  transform: rotate(90deg);
+  transition: transform 0.15s ease;
+}
+
+.chevronCollapsed {
+  transform: rotate(0deg);
+}
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgb(0 0 0 / 0.45);
+}
+
+.modalWindow {
+  width: 100%;
+  max-width: 22rem;
+  padding: 1.25rem 1.35rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow:
+    0 12px 40px rgb(0 0 0 / 0.18),
+    0 0 0 1px rgb(0 0 0 / 0.06);
+}
+
+.modalTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.modalMessage {
+  margin: 0 0 1.25rem;
+  font-size: 0.925rem;
+  line-height: 1.45;
+  color: #4a5568;
+}
+
+.modalActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.modalButtonSecondary,
+.modalButtonDanger {
+  padding: 0.45rem 0.9rem;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease;
+}
+
+.modalButtonSecondary {
+  background: #f1f2f4;
+  color: #1a1a1a;
+  border-color: #d8dce3;
+}
+
+.modalButtonSecondary:hover {
+  background: #e6e8ec;
+}
+
+.modalButtonDanger {
+  background: #c53030;
+  color: #fff;
+}
+
+.modalButtonDanger:hover {
+  background: #9b2424;
+}
